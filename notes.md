@@ -27,3 +27,11 @@ ReactDOM.render(
 );
 ```
 
+## GQL Queries in React
+Checklist:
+1. Identify data required by our individual component
+2. Write query in GQL (for practice) and in component file
+3. Bond query + component
+4. Access data
+
+So when we send a query to fetch some data, apollo grabs that data and feeds it to the component through props. 
