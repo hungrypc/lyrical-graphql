@@ -23,7 +23,6 @@ function SongList(props) {
       </div>
     )
   }
-
 }
 
 const query = gql`
