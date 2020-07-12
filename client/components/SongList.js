@@ -4,12 +4,10 @@ import { graphql } from 'react-apollo'
 
 function SongList(props) {
 
-  console.log(props)
-
   const renderSongs = () => {
     return props.data.songs.map(song => {
       return (
-        <li key={song.id}>
+        <li key={song.id} className="collection-item">
           {song.title}
         </li>
       )
@@ -20,14 +18,13 @@ function SongList(props) {
     return <div>Loading...</div>
   } else {
     return (
-      <div>
+      <div className="collection">
         {renderSongs()}
       </div>
     )
   }
 
 }
-
 
 const query = gql`
   {

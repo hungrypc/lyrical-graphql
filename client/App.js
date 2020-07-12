@@ -1,11 +1,9 @@
 import React from 'react'
 
-import SongList from './components/SongList'
-
-function App() {
+function App(props) {
   return (
-    <div>
-      <SongList/>
+    <div className="container">
+      {props.children}
     </div>
   )
 }
