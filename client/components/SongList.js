@@ -33,4 +33,13 @@ function SongList(props) {
   }
 }
 
-export default graphql(fetchSongs)(SongList)
+const mutation = gql`
+  mutation DeleteSong($id: ID) {
+    deleteSong(id: $id) {
+      id
+    }
+  }
+`
+export default graphql(mutation)(
+  graphql(fetchSongs)(SongList)
+)
