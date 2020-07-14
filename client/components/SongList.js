@@ -12,8 +12,11 @@ function SongList(props) {
       variables: {
         id
       },
-      refetchQueries: [{ query: fetchSongs }]
+      // refetchQueries: [{ query: fetchSongs }]
     })
+    // alternate method refecthing
+    .then(() => this.props.data.refetch())  
+    // we use this method because fetchSongs is associated with SongList
   }
 
   const renderSongs = () => {
